@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the drawParkingMarker function from the parkings.presentation library, for the Dart programming language.">
+  <title>drawParkingMarker function - parkings.presentation library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../"
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">wayfar</a></li>
+    <li><a href="../parkings.presentation/parkings.presentation-library.html">parkings.presentation</a></li>
+    <li class="self-crumb">drawParkingMarker function</li>
+  </ol>
+  <div class="self-name">drawParkingMarker</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-function">drawParkingMarker</span> function 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    <section class="multi-line-signature">
+        
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/google_maps_flutter_platform_interface/2.1.1/google_maps_flutter_platform_interface/BitmapDescriptor-class.html">BitmapDescriptor</a></span>&gt;</span></span>
+<span class="name ">drawParkingMarker</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="drawParkingMarker-param-theme"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/material/ThemeData-class.html">ThemeData</a></span> <span class="parameter-name">theme</span>, </span></li>
+<li><span class="parameter" id="drawParkingMarker-param-parking"><span class="type-annotation"><a href="../parkings.domain/Parking-class.html">Parking</a></span> <span class="parameter-name">parking</span></span></li>
+</ol>)
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Draw a marker (for the parking) and return a <a href="https://pub.dev/documentation/google_maps_flutter_platform_interface/2.1.1/google_maps_flutter_platform_interface/BitmapDescriptor-class.html">BitmapDescriptor</a> to use in the map view</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Future&lt;BitmapDescriptor&gt; drawParkingMarker(ThemeData theme, Parking parking) async {
+  print(&quot;drawing bb&quot;);
+  final recorder = new ui.PictureRecorder();
+  final double w = 120;
+  final double h = 140;
+  final double ht = 30;
+  final double wt = 40;
+
+  final canvas = new Canvas(
+      recorder,
+      Rect.fromPoints(Offset(0.0, 0.0), Offset(w+wt, h+ht)));
+
+  final fill = Paint()
+    ..color = theme.primaryColor
+    ..style = PaintingStyle.fill;
+
+  final bg = RRect.fromRectAndRadius(
+    Rect.fromPoints( Offset(0.0, 0.0),  Offset(w, h)),
+    Radius.circular(20),
+  );
+  final rectPath = Path()..addRRect(bg);
+  canvas.drawShadow(rectPath, Colors.grey, 4, false);
+  canvas.drawPath(rectPath, fill);
+
+  &#47;&#47;triangle
+  var path = Path();
+  path.moveTo(w&#47;2, h+ht);
+  path.lineTo((w-wt)&#47;2, h);
+  path.lineTo((w+wt)&#47;2, h);
+  path.close();
+  final filltriangle = Paint()
+    ..color = theme.primaryColor
+    ..style = PaintingStyle.fill;
+  canvas.drawPath(path, filltriangle);
+
+  &#47;&#47;title
+  final pText = TextSpan(
+      text: &#39;P&#39;,
+      style: theme.textTheme.headline2!.apply(
+          color: Colors.white
+      )
+  );
+  final pTextPainter = TextPainter(
+    text: pText,
+    textDirection: TextDirection.ltr,
+  );
+  pTextPainter.layout(
+    minWidth: 0,
+    maxWidth: w,
+  );
+  &#47;&#47; spaces
+  final sText = TextSpan(
+      text: parking.spacesAvailable.toString(),
+      style: theme.textTheme.headline4!.apply(
+          color: Colors.white,
+          fontWeightDelta: 2
+      )
+  );
+  final sTextPainter = TextPainter(
+    text: sText,
+    textDirection: TextDirection.ltr,
+  );
+  sTextPainter.layout(
+    minWidth: 0,
+    maxWidth: w,
+  );
+  var spacing = (h - pTextPainter.height - sTextPainter.height)&#47;5;
+  pTextPainter.paint(canvas, Offset(
+      (w - pTextPainter.width)&#47;2,
+      2*spacing)
+  );
+  sTextPainter.paint(canvas, Offset(
+      (w - sTextPainter.width)&#47;2,
+      (3*spacing)+pTextPainter.height)
+  );
+
+  final picture = recorder.endRecording();
+  final img = await picture.toImage(124, 170);
+  final byteData = await img.toByteData(format: ui.ImageByteFormat.png);
+  var pngBytes = byteData!.buffer.asUint8List();
+  var bs64 = base64Encode(pngBytes);
+  print(pngBytes);
+  print(bs64);
+  print(&quot;drawing_bmp&quot;);
+  return BitmapDescriptor.fromBytes(pngBytes);
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../index.html">wayfar</a></li>
+  <li><a href="../parkings.presentation/parkings.presentation-library.html">parkings.presentation</a></li>
+  <li class="self-crumb">drawParkingMarker function</li>
+</ol>
+
+
+    <h5>parkings.presentation library</h5>
+    <ol>
+  <li class="section-title"><a href="../parkings.presentation/parkings.presentation-library.html#classes">Classes</a></li>
+  <li><a href="../parkings.presentation/ActionOnParkingButton-class.html">ActionOnParkingButton</a></li>
+  <li><a href="../parkings.presentation/DrawerToggler-class.html">DrawerToggler</a></li>
+  <li><a href="../parkings.presentation/FiltersModal-class.html">FiltersModal</a></li>
+  <li><a href="../parkings.presentation/GetAllServicesEvent-class.html">GetAllServicesEvent</a></li>
+  <li><a href="../parkings.presentation/ParkingDetailBloc-class.html">ParkingDetailBloc</a></li>
+  <li><a href="../parkings.presentation/ParkingDetailEvent-class.html">ParkingDetailEvent</a></li>
+  <li><a href="../parkings.presentation/ParkingDetailScreen-class.html">ParkingDetailScreen</a></li>
+  <li><a href="../parkings.presentation/ParkingErrorState-class.html">ParkingErrorState</a></li>
+  <li><a href="../parkings.presentation/ParkingFiltersBloc-class.html">ParkingFiltersBloc</a></li>
+  <li><a href="../parkings.presentation/ParkingFiltersErrorState-class.html">ParkingFiltersErrorState</a></li>
+  <li><a href="../parkings.presentation/ParkingFiltersEvent-class.html">ParkingFiltersEvent</a></li>
+  <li><a href="../parkings.presentation/ParkingFiltersInitialState-class.html">ParkingFiltersInitialState</a></li>
+  <li><a href="../parkings.presentation/ParkingFiltersLoadingState-class.html">ParkingFiltersLoadingState</a></li>
+  <li><a href="../parkings.presentation/ParkingFiltersReadyState-class.html">ParkingFiltersReadyState</a></li>
+  <li><a href="../parkings.presentation/ParkingFiltersState-class.html">ParkingFiltersState</a></li>
+  <li><a href="../parkings.presentation/ParkingInitialState-class.html">ParkingInitialState</a></li>
+  <li><a href="../parkings.presentation/ParkingListItem-class.html">ParkingListItem</a></li>
+  <li><a href="../parkings.presentation/ParkingLoadedState-class.html">ParkingLoadedState</a></li>
+  <li><a href="../parkings.presentation/ParkingLoadingState-class.html">ParkingLoadingState</a></li>
+  <li><a href="../parkings.presentation/ParkingMapItem-class.html">ParkingMapItem</a></li>
+  <li><a href="../parkings.presentation/ParkingsBloc-class.html">ParkingsBloc</a></li>
+  <li><a href="../parkings.presentation/ParkingScreenLoadedEvent-class.html">ParkingScreenLoadedEvent</a></li>
+  <li><a href="../parkings.presentation/ParkingsErrorState-class.html">ParkingsErrorState</a></li>
+  <li><a href="../parkings.presentation/ParkingServiceChip-class.html">ParkingServiceChip</a></li>
+  <li><a href="../parkings.presentation/ParkingsEvent-class.html">ParkingsEvent</a></li>
+  <li><a href="../parkings.presentation/ParkingsInitialState-class.html">ParkingsInitialState</a></li>
+  <li><a href="../parkings.presentation/ParkingsListScreen-class.html">ParkingsListScreen</a></li>
+  <li><a href="../parkings.presentation/ParkingsLoadedState-class.html">ParkingsLoadedState</a></li>
+  <li><a href="../parkings.presentation/ParkingsLoadingState-class.html">ParkingsLoadingState</a></li>
+  <li><a href="../parkings.presentation/ParkingsMapScreen-class.html">ParkingsMapScreen</a></li>
+  <li><a href="../parkings.presentation/ParkingsRequestedEvent-class.html">ParkingsRequestedEvent</a></li>
+  <li><a href="../parkings.presentation/ParkingsScreen-class.html">ParkingsScreen</a></li>
+  <li><a href="../parkings.presentation/ParkingsState-class.html">ParkingsState</a></li>
+  <li><a href="../parkings.presentation/ParkingState-class.html">ParkingState</a></li>
+  <li><a href="../parkings.presentation/ViewToggler-class.html">ViewToggler</a></li>
+
+
+
+
+
+  <li class="section-title"><a href="../parkings.presentation/parkings.presentation-library.html#functions">Functions</a></li>
+  <li><a href="../parkings.presentation/drawParkingMarker.html">drawParkingMarker</a></li>
+
+  <li class="section-title"><a href="../parkings.presentation/parkings.presentation-library.html#enums">Enums</a></li>
+  <li><a href="../parkings.presentation/ViewType.html">ViewType</a></li>
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    wayfar
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/script.js?v1"></script>
+
+
+
+</body>
+
+</html>
+

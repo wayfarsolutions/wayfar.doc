@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the getAll method from the ParkingService class, for the Dart programming language.">
+  <title>getAll method - ParkingService class - parkings.data library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../"
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">wayfar</a></li>
+    <li><a href="../../parkings.data/parkings.data-library.html">parkings.data</a></li>
+    <li><a href="../../parkings.data/ParkingService-class.html">ParkingService</a></li>
+    <li class="self-crumb">getAll method</li>
+  </ol>
+  <div class="self-name">getAll</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-method">getAll</span> method 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+<div>
+  <ol class="annotation-list">
+    <li>@<a href="https://api.flutter.dev/flutter/dart-core/override-constant.html">override</a></li>
+  </ol>
+</div>
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../parkings.data/ParkingModel-class.html">ParkingModel</a></span>&gt;</span></span>&gt;</span></span>
+<span class="name ">getAll</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="getAll-param-filterText">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">filterText</span>, </span></li>
+<li><span class="parameter" id="getAll-param-services"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../parkings.data/ServiceModel-class.html">ServiceModel</a></span>&gt;</span>?</span> <span class="parameter-name">services</span>, </span></li>
+<li><span class="parameter" id="getAll-param-sortKey"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">sortKey</span>, </span></li>
+<li><span class="parameter" id="getAll-param-priceMin"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">priceMin</span>, </span></li>
+<li><span class="parameter" id="getAll-param-priceMax"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">priceMax</span>, </span></li>
+<li><span class="parameter" id="getAll-param-distanceMin"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">distanceMin</span>, </span></li>
+<li><span class="parameter" id="getAll-param-distanceMax"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">distanceMax</span>}</span></li>
+</ol>)
+
+      <div class="features">override</div>
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Fetch list of parkings, filtered by text, services, price range, distance range</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@override
+Future&lt;List&lt;ParkingModel&gt;&gt; getAll({String? filterText, List&lt;ServiceModel&gt;? services, String? sortKey, double? priceMin, double? priceMax, double? distanceMin, double? distanceMax}) async {
+  &#47;&#47; Uses api service fetching only necessary data for list
+  final response = await rootBundle.loadString(&#39;assets&#47;dummy&#47;parkings.json&#39;);
+  final data = await json.decode(response);
+  List&lt;ParkingModel&gt; parkings = List.from(data).map((p) =&gt; ParkingModel.fromJson(p)).toList();
+  var filtered = _filterParkings(parkings,
+      filterText: filterText,
+      sortKey: sortKey,
+      services: services==null ? null : services.map((e) =&gt; ServiceModel(e.id, e.title, e.icon)).toList(),
+      priceMin: priceMin,
+      priceMax: priceMax,
+      distanceMin: distanceMin,
+      distanceMax: distanceMax
+  );
+  print(filtered);
+  filtered.sort((a,b) {
+    return a.compareBy(sortKey, b);
+  });
+  return Future.delayed(Duration(milliseconds: 2000),() =&gt; filtered);
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../../index.html">wayfar</a></li>
+  <li><a href="../../parkings.data/parkings.data-library.html">parkings.data</a></li>
+  <li><a href="../../parkings.data/ParkingService-class.html">ParkingService</a></li>
+  <li class="self-crumb">getAll method</li>
+</ol>
+
+
+    <h5>ParkingService class</h5>
+    <ol>
+
+    <li class="section-title"><a href="../../parkings.data/ParkingService-class.html#constructors">Constructors</a></li>
+    <li><a href="../../parkings.data/ParkingService/ParkingService.html">ParkingService</a></li>
+
+
+    <li class="section-title inherited">
+      <a href="../../parkings.data/ParkingService-class.html#instance-properties">Properties</a>
+    </li>
+    <li class="inherited"><a href="../../core.common/RestService/client.html">client</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
+
+    <li class="section-title"><a href="../../parkings.data/ParkingService-class.html#instance-methods">Methods</a></li>
+    <li><a href="../../parkings.data/ParkingService/getAll.html">getAll</a></li>
+    <li><a href="../../parkings.data/ParkingService/getAllServices.html">getAllServices</a></li>
+    <li><a href="../../parkings.data/ParkingService/getParkingById.html">getParkingById</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
+
+    <li class="section-title inherited"><a href="../../parkings.data/ParkingService-class.html#operators">Operators</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    wayfar
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/script.js?v1"></script>
+
+
+
+</body>
+
+</html>
+

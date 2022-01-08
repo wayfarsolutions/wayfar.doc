@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="payment.presentation library API docs, for the Dart programming language.">
+  <title>payment.presentation library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../"
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">wayfar</a></li>
+    <li class="self-crumb">payment.presentation library</li>
+  </ol>
+  <div class="self-name">payment.presentation</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-library">payment.presentation</span> library 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Presentation layer for Booking and Payment feature.</p>
+</section>
+
+
+    <section class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+
+      <dl>
+        <dt id="BookingBloc">
+  <span class="name "><a href="../payment.presentation/BookingBloc-class.html">BookingBloc</a></span> 
+
+</dt>
+<dd>
+  Booking business logic component that manage <a href="../payment.presentation/BookingsState-class.html">BookingsState</a> and handle <a href="../payment.presentation/BookingsEvent-class.html">BookingsEvent</a> 
+</dd>
+
+        <dt id="BookingDeleteLoadingState">
+  <span class="name "><a href="../payment.presentation/BookingDeleteLoadingState-class.html">BookingDeleteLoadingState</a></span> 
+
+</dt>
+<dd>
+  Booking removal loading state (operation in progress) 
+</dd>
+
+        <dt id="BookingDeleteRequestEvent">
+  <span class="name "><a href="../payment.presentation/BookingDeleteRequestEvent-class.html">BookingDeleteRequestEvent</a></span> 
+
+</dt>
+<dd>
+  To remove booking from list 
+</dd>
+
+        <dt id="BookingsErrorState">
+  <span class="name "><a href="../payment.presentation/BookingsErrorState-class.html">BookingsErrorState</a></span> 
+
+</dt>
+<dd>
+  Bookings error state 
+</dd>
+
+        <dt id="BookingsEvent">
+  <span class="name "><a href="../payment.presentation/BookingsEvent-class.html">BookingsEvent</a></span> 
+
+</dt>
+<dd>
+  Booking related event abstraction 
+</dd>
+
+        <dt id="BookingsInitialState">
+  <span class="name "><a href="../payment.presentation/BookingsInitialState-class.html">BookingsInitialState</a></span> 
+
+</dt>
+<dd>
+  Booking initial state 
+</dd>
+
+        <dt id="BookingsLoadedState">
+  <span class="name "><a href="../payment.presentation/BookingsLoadedState-class.html">BookingsLoadedState</a></span> 
+
+</dt>
+<dd>
+  Bookings list loaded state 
+</dd>
+
+        <dt id="BookingsLoadingState">
+  <span class="name "><a href="../payment.presentation/BookingsLoadingState-class.html">BookingsLoadingState</a></span> 
+
+</dt>
+<dd>
+  Bookings list loading state 
+</dd>
+
+        <dt id="BookingsRequestedEvent">
+  <span class="name "><a href="../payment.presentation/BookingsRequestedEvent-class.html">BookingsRequestedEvent</a></span> 
+
+</dt>
+<dd>
+  To get list of bookings 
+</dd>
+
+        <dt id="BookingsScreen">
+  <span class="name "><a href="../payment.presentation/BookingsScreen-class.html">BookingsScreen</a></span> 
+
+</dt>
+<dd>
+  Screen: List of bookings 
+</dd>
+
+        <dt id="BookingsState">
+  <span class="name "><a href="../payment.presentation/BookingsState-class.html">BookingsState</a></span> 
+
+</dt>
+<dd>
+  Booking related state abstraction 
+</dd>
+
+        <dt id="PaymentAddPromoCodeEvent">
+  <span class="name "><a href="../payment.presentation/PaymentAddPromoCodeEvent-class.html">PaymentAddPromoCodeEvent</a></span> 
+
+</dt>
+<dd>
+  To consider promo code  in payment 
+</dd>
+
+        <dt id="PaymentBloc">
+  <span class="name "><a href="../payment.presentation/PaymentBloc-class.html">PaymentBloc</a></span> 
+
+</dt>
+<dd>
+  Payment business logic component that manage <a href="../payment.presentation/PaymentState-class.html">PaymentState</a> and handle <a href="../payment.presentation/PaymentEvent-class.html">PaymentEvent</a> 
+</dd>
+
+        <dt id="PaymentChangeTimeEvent">
+  <span class="name "><a href="../payment.presentation/PaymentChangeTimeEvent-class.html">PaymentChangeTimeEvent</a></span> 
+
+</dt>
+<dd>
+  To consider duration in payment 
+</dd>
+
+        <dt id="PaymentErrorState">
+  <span class="name "><a href="../payment.presentation/PaymentErrorState-class.html">PaymentErrorState</a></span> 
+
+</dt>
+<dd>
+  When an error has occurred during payment execution 
+</dd>
+
+        <dt id="PaymentEvent">
+  <span class="name "><a href="../payment.presentation/PaymentEvent-class.html">PaymentEvent</a></span> 
+
+</dt>
+<dd>
+  Payment related events abstraction 
+</dd>
+
+        <dt id="PaymentExecuteEvent">
+  <span class="name "><a href="../payment.presentation/PaymentExecuteEvent-class.html">PaymentExecuteEvent</a></span> 
+
+</dt>
+<dd>
+  To execute payment operation 
+</dd>
+
+        <dt id="PaymentExecutionScreen">
+  <span class="name "><a href="../payment.presentation/PaymentExecutionScreen-class.html">PaymentExecutionScreen</a></span> 
+
+</dt>
+<dd>
+  Screen: Payment form screen 
+</dd>
+
+        <dt id="PaymentInitialState">
+  <span class="name "><a href="../payment.presentation/PaymentInitialState-class.html">PaymentInitialState</a></span> 
+
+</dt>
+<dd>
+  Payment initial state 
+</dd>
+
+        <dt id="PaymentLoadingState">
+  <span class="name "><a href="../payment.presentation/PaymentLoadingState-class.html">PaymentLoadingState</a></span> 
+
+</dt>
+<dd>
+  When the operation is in progress 
+</dd>
+
+        <dt id="PaymentProceedState">
+  <span class="name "><a href="../payment.presentation/PaymentProceedState-class.html">PaymentProceedState</a></span> 
+
+</dt>
+<dd>
+  Payment form related state 
+</dd>
+
+        <dt id="PaymentPromoCodeAddedState">
+  <span class="name "><a href="../payment.presentation/PaymentPromoCodeAddedState-class.html">PaymentPromoCodeAddedState</a></span> 
+
+</dt>
+<dd>
+  When a promo code is attached 
+</dd>
+
+        <dt id="PaymentReviewScreen">
+  <span class="name "><a href="../payment.presentation/PaymentReviewScreen-class.html">PaymentReviewScreen</a></span> 
+
+</dt>
+<dd>
+  Screen: Payment review screen 
+</dd>
+
+        <dt id="PaymentScreen">
+  <span class="name "><a href="../payment.presentation/PaymentScreen-class.html">PaymentScreen</a></span> 
+
+</dt>
+<dd>
+  Screen: Payment screens view pager 
+</dd>
+
+        <dt id="PaymentStartEvent">
+  <span class="name "><a href="../payment.presentation/PaymentStartEvent-class.html">PaymentStartEvent</a></span> 
+
+</dt>
+<dd>
+  To initiate payment operation 
+</dd>
+
+        <dt id="PaymentState">
+  <span class="name "><a href="../payment.presentation/PaymentState-class.html">PaymentState</a></span> 
+
+</dt>
+<dd>
+  Payment related state abstraction 
+</dd>
+
+        <dt id="PaymentSuccessState">
+  <span class="name "><a href="../payment.presentation/PaymentSuccessState-class.html">PaymentSuccessState</a></span> 
+
+</dt>
+<dd>
+  When the payment is executed successfully 
+</dd>
+
+        <dt id="ReservationsList">
+  <span class="name "><a href="../payment.presentation/ReservationsList-class.html">ReservationsList</a></span> 
+
+</dt>
+<dd>
+   
+</dd>
+
+      </dl>
+    </section>
+
+
+
+
+
+
+    <section class="summary offset-anchor" id="enums">
+      <h2>Enums</h2>
+
+      <dl>
+        <dt id="ViewChangeType">
+  <span class="name "><a href="../payment.presentation/ViewChangeType.html">ViewChangeType</a></span> 
+
+</dt>
+<dd>
+   
+</dd>
+
+      </dl>
+    </section>
+
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../index.html">wayfar</a></li>
+  <li class="self-crumb">payment.presentation library</li>
+</ol>
+
+
+    <h5><span class="package-name">wayfar</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="../main/main-library.html">main</a></li>
+      <li class="section-subtitle">Authentication</li>
+        <li class="section-subitem"><a href="../authentication.data/authentication.data-library.html">authentication.data</a></li>
+        <li class="section-subitem"><a href="../authentication.domain/authentication.domain-library.html">authentication.domain</a></li>
+        <li class="section-subitem"><a href="../authentication.presentation/authentication.presentation-library.html">authentication.presentation</a></li>
+        <li class="section-subitem"><a href="../authentication.shared/authentication.shared-library.html">authentication.shared</a></li>
+      <li class="section-subtitle">Bookmarks</li>
+        <li class="section-subitem"><a href="../bookmarks.data/bookmarks.data-library.html">bookmarks.data</a></li>
+        <li class="section-subitem"><a href="../bookmarks.domain/bookmarks.domain-library.html">bookmarks.domain</a></li>
+        <li class="section-subitem"><a href="../bookmarks.presentation/bookmarks.presentation-library.html">bookmarks.presentation</a></li>
+      <li class="section-subtitle">Contact-us</li>
+        <li class="section-subitem"><a href="../contact_us.data/contact_us.data-library.html">contact_us.data</a></li>
+        <li class="section-subitem"><a href="../contact_us.domain/contact_us.domain-library.html">contact_us.domain</a></li>
+        <li class="section-subitem"><a href="../contact_us.presentation/contact_us.presentation-library.html">contact_us.presentation</a></li>
+      <li class="section-subtitle">Core</li>
+        <li class="section-subitem"><a href="../core/core-library.html">core</a></li>
+        <li class="section-subitem"><a href="../core.common/core.common-library.html">core.common</a></li>
+        <li class="section-subitem"><a href="../core.database/core.database-library.html">core.database</a></li>
+        <li class="section-subitem"><a href="../core.di/core.di-library.html">core.di</a></li>
+        <li class="section-subitem"><a href="../core.localization/core.localization-library.html">core.localization</a></li>
+        <li class="section-subitem"><a href="../core.location/core.location-library.html">core.location</a></li>
+        <li class="section-subitem"><a href="../core.navigation/core.navigation-library.html">core.navigation</a></li>
+        <li class="section-subitem"><a href="../core.storage/core.storage-library.html">core.storage</a></li>
+        <li class="section-subitem"><a href="../core.theme/core.theme-library.html">core.theme</a></li>
+      <li class="section-subtitle">Home</li>
+        <li class="section-subitem"><a href="../home.presentation/home.presentation-library.html">home.presentation</a></li>
+      <li class="section-subtitle">My cards</li>
+        <li class="section-subitem"><a href="../mycards.data/mycards.data-library.html">mycards.data</a></li>
+        <li class="section-subitem"><a href="../mycards.domain/mycards.domain-library.html">mycards.domain</a></li>
+        <li class="section-subitem"><a href="../mycards.presentation/mycards.presentation-library.html">mycards.presentation</a></li>
+      <li class="section-subtitle">Notifications</li>
+        <li class="section-subitem"><a href="../notifications.data/notifications.data-library.html">notifications.data</a></li>
+        <li class="section-subitem"><a href="../notifications.domain/notifications.domain-library.html">notifications.domain</a></li>
+        <li class="section-subitem"><a href="../notifications.presentation/notifications.presentation-library.html">notifications.presentation</a></li>
+      <li class="section-subtitle">OnBoarding</li>
+        <li class="section-subitem"><a href="../onboarding/onboarding-library.html">onboarding</a></li>
+      <li class="section-subtitle">Parkings</li>
+        <li class="section-subitem"><a href="../parkings.data/parkings.data-library.html">parkings.data</a></li>
+        <li class="section-subitem"><a href="../parkings.domain/parkings.domain-library.html">parkings.domain</a></li>
+        <li class="section-subitem"><a href="../parkings.presentation/parkings.presentation-library.html">parkings.presentation</a></li>
+      <li class="section-subtitle">Payment</li>
+        <li class="section-subitem"><a href="../payment.data/payment.data-library.html">payment.data</a></li>
+        <li class="section-subitem"><a href="../payment.domain/payment.domain-library.html">payment.domain</a></li>
+        <li class="section-subitem"><a href="../payment.presentation/payment.presentation-library.html">payment.presentation</a></li>
+        <li class="section-subitem"><a href="../payment.shared/payment.shared-library.html">payment.shared</a></li>
+      <li class="section-subtitle">Profile</li>
+        <li class="section-subitem"><a href="../profile.data/profile.data-library.html">profile.data</a></li>
+        <li class="section-subitem"><a href="../profile.domain/profile.domain-library.html">profile.domain</a></li>
+        <li class="section-subitem"><a href="../profile.presentation/profile.presentation-library.html">profile.presentation</a></li>
+      <li class="section-subtitle">Settings</li>
+        <li class="section-subitem"><a href="../settings/settings-library.html">settings</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <h5>payment.presentation library</h5>
+    <ol>
+  <li class="section-title"><a href="../payment.presentation/payment.presentation-library.html#classes">Classes</a></li>
+  <li><a href="../payment.presentation/BookingBloc-class.html">BookingBloc</a></li>
+  <li><a href="../payment.presentation/BookingDeleteLoadingState-class.html">BookingDeleteLoadingState</a></li>
+  <li><a href="../payment.presentation/BookingDeleteRequestEvent-class.html">BookingDeleteRequestEvent</a></li>
+  <li><a href="../payment.presentation/BookingsErrorState-class.html">BookingsErrorState</a></li>
+  <li><a href="../payment.presentation/BookingsEvent-class.html">BookingsEvent</a></li>
+  <li><a href="../payment.presentation/BookingsInitialState-class.html">BookingsInitialState</a></li>
+  <li><a href="../payment.presentation/BookingsLoadedState-class.html">BookingsLoadedState</a></li>
+  <li><a href="../payment.presentation/BookingsLoadingState-class.html">BookingsLoadingState</a></li>
+  <li><a href="../payment.presentation/BookingsRequestedEvent-class.html">BookingsRequestedEvent</a></li>
+  <li><a href="../payment.presentation/BookingsScreen-class.html">BookingsScreen</a></li>
+  <li><a href="../payment.presentation/BookingsState-class.html">BookingsState</a></li>
+  <li><a href="../payment.presentation/PaymentAddPromoCodeEvent-class.html">PaymentAddPromoCodeEvent</a></li>
+  <li><a href="../payment.presentation/PaymentBloc-class.html">PaymentBloc</a></li>
+  <li><a href="../payment.presentation/PaymentChangeTimeEvent-class.html">PaymentChangeTimeEvent</a></li>
+  <li><a href="../payment.presentation/PaymentErrorState-class.html">PaymentErrorState</a></li>
+  <li><a href="../payment.presentation/PaymentEvent-class.html">PaymentEvent</a></li>
+  <li><a href="../payment.presentation/PaymentExecuteEvent-class.html">PaymentExecuteEvent</a></li>
+  <li><a href="../payment.presentation/PaymentExecutionScreen-class.html">PaymentExecutionScreen</a></li>
+  <li><a href="../payment.presentation/PaymentInitialState-class.html">PaymentInitialState</a></li>
+  <li><a href="../payment.presentation/PaymentLoadingState-class.html">PaymentLoadingState</a></li>
+  <li><a href="../payment.presentation/PaymentProceedState-class.html">PaymentProceedState</a></li>
+  <li><a href="../payment.presentation/PaymentPromoCodeAddedState-class.html">PaymentPromoCodeAddedState</a></li>
+  <li><a href="../payment.presentation/PaymentReviewScreen-class.html">PaymentReviewScreen</a></li>
+  <li><a href="../payment.presentation/PaymentScreen-class.html">PaymentScreen</a></li>
+  <li><a href="../payment.presentation/PaymentStartEvent-class.html">PaymentStartEvent</a></li>
+  <li><a href="../payment.presentation/PaymentState-class.html">PaymentState</a></li>
+  <li><a href="../payment.presentation/PaymentSuccessState-class.html">PaymentSuccessState</a></li>
+  <li><a href="../payment.presentation/ReservationsList-class.html">ReservationsList</a></li>
+
+
+
+
+
+
+  <li class="section-title"><a href="../payment.presentation/payment.presentation-library.html#enums">Enums</a></li>
+  <li><a href="../payment.presentation/ViewChangeType.html">ViewChangeType</a></li>
+
+
+</ol>
+
+  </div><!--/sidebar-offcanvas-right-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    wayfar
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/script.js?v1"></script>
+
+
+
+</body>
+
+</html>
+

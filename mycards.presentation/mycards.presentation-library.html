@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="mycards.presentation library API docs, for the Dart programming language.">
+  <title>mycards.presentation library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../"
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">wayfar</a></li>
+    <li class="self-crumb">mycards.presentation library</li>
+  </ol>
+  <div class="self-name">mycards.presentation</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-library">mycards.presentation</span> library 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Presentation layer for My cards feature.</p>
+</section>
+
+
+    <section class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+
+      <dl>
+        <dt id="AddCardRequested">
+  <span class="name "><a href="../mycards.presentation/AddCardRequested-class.html">AddCardRequested</a></span> 
+
+</dt>
+<dd>
+  Triggered when adding a card is requested 
+</dd>
+
+        <dt id="AddCardSucceedState">
+  <span class="name "><a href="../mycards.presentation/AddCardSucceedState-class.html">AddCardSucceedState</a></span> 
+
+</dt>
+<dd>
+  When the card adding/editing is loading (in progress) 
+</dd>
+
+        <dt id="AddOrEditCardBloc">
+  <span class="name "><a href="../mycards.presentation/AddOrEditCardBloc-class.html">AddOrEditCardBloc</a></span> 
+
+</dt>
+<dd>
+  Add or Edit Card Bloc: Business logic component that manage <a href="../mycards.presentation/AddOrEditCardState-class.html">AddOrEditCardState</a> and handle <a href="../mycards.presentation/AddOrEditCardEvent-class.html">AddOrEditCardEvent</a> events 
+</dd>
+
+        <dt id="AddOrEditCardErrorState">
+  <span class="name "><a href="../mycards.presentation/AddOrEditCardErrorState-class.html">AddOrEditCardErrorState</a></span> 
+
+</dt>
+<dd>
+  When the card adding/editing had failed 
+</dd>
+
+        <dt id="AddOrEditCardEvent">
+  <span class="name "><a href="../mycards.presentation/AddOrEditCardEvent-class.html">AddOrEditCardEvent</a></span> 
+
+</dt>
+<dd>
+  Abstract class to represent adding or editing card related events 
+</dd>
+
+        <dt id="AddOrEditCardInitialState">
+  <span class="name "><a href="../mycards.presentation/AddOrEditCardInitialState-class.html">AddOrEditCardInitialState</a></span> 
+
+</dt>
+<dd>
+  Initial state of add/edit card screen 
+</dd>
+
+        <dt id="AddOrEditCardLoadingState">
+  <span class="name "><a href="../mycards.presentation/AddOrEditCardLoadingState-class.html">AddOrEditCardLoadingState</a></span> 
+
+</dt>
+<dd>
+  When the card adding/editing is loading (in progress) 
+</dd>
+
+        <dt id="AddOrEditCardModal">
+  <span class="name "><a href="../mycards.presentation/AddOrEditCardModal-class.html">AddOrEditCardModal</a></span> 
+
+</dt>
+<dd>
+  Screen: Adding/Editing card modal 
+</dd>
+
+        <dt id="AddOrEditCardState">
+  <span class="name "><a href="../mycards.presentation/AddOrEditCardState-class.html">AddOrEditCardState</a></span> 
+
+</dt>
+<dd>
+  Abstract class to represent adding or editing card related states 
+</dd>
+
+        <dt id="AddTransactionEvent">
+  <span class="name "><a href="../mycards.presentation/AddTransactionEvent-class.html">AddTransactionEvent</a></span> 
+
+</dt>
+<dd>
+  Triggered when a new transactions is saved 
+</dd>
+
+        <dt id="CardEditedEvent">
+  <span class="name "><a href="../mycards.presentation/CardEditedEvent-class.html">CardEditedEvent</a></span> 
+
+</dt>
+<dd>
+  Triggered when a card from the list had been edited 
+</dd>
+
+        <dt id="DeleteCardEvent">
+  <span class="name "><a href="../mycards.presentation/DeleteCardEvent-class.html">DeleteCardEvent</a></span> 
+
+</dt>
+<dd>
+  Triggered when a card from the list had been removed 
+</dd>
+
+        <dt id="EditCardRequested">
+  <span class="name "><a href="../mycards.presentation/EditCardRequested-class.html">EditCardRequested</a></span> 
+
+</dt>
+<dd>
+  Triggered when editing a card is requested 
+</dd>
+
+        <dt id="EditCardSucceedState">
+  <span class="name "><a href="../mycards.presentation/EditCardSucceedState-class.html">EditCardSucceedState</a></span> 
+
+</dt>
+<dd>
+  When the card is added/edited is successfully 
+</dd>
+
+        <dt id="MyCardsBloc">
+  <span class="name "><a href="../mycards.presentation/MyCardsBloc-class.html">MyCardsBloc</a></span> 
+
+</dt>
+<dd>
+  My Cards bloc: Business logic component that manage <a href="../mycards.presentation/MyCardsState-class.html">MyCardsState</a> and handle <a href="../mycards.presentation/MyCardsEvent-class.html">MyCardsEvent</a> events 
+</dd>
+
+        <dt id="MyCardsErrorState">
+  <span class="name "><a href="../mycards.presentation/MyCardsErrorState-class.html">MyCardsErrorState</a></span> 
+
+</dt>
+<dd>
+  When an error has occured during loading the list of cards 
+</dd>
+
+        <dt id="MyCardsEvent">
+  <span class="name "><a href="../mycards.presentation/MyCardsEvent-class.html">MyCardsEvent</a></span> 
+
+</dt>
+<dd>
+  Abstract class to represent cards list related events 
+</dd>
+
+        <dt id="MyCardsInitialState">
+  <span class="name "><a href="../mycards.presentation/MyCardsInitialState-class.html">MyCardsInitialState</a></span> 
+
+</dt>
+<dd>
+  Initial state (empty cards list) 
+</dd>
+
+        <dt id="MyCardsLoadedState">
+  <span class="name "><a href="../mycards.presentation/MyCardsLoadedState-class.html">MyCardsLoadedState</a></span> 
+
+</dt>
+<dd>
+  When the list is loaded 
+</dd>
+
+        <dt id="MyCardsLoadingState">
+  <span class="name "><a href="../mycards.presentation/MyCardsLoadingState-class.html">MyCardsLoadingState</a></span> 
+
+</dt>
+<dd>
+  When the cards are loading 
+</dd>
+
+        <dt id="MyCardsRequestedEvent">
+  <span class="name "><a href="../mycards.presentation/MyCardsRequestedEvent-class.html">MyCardsRequestedEvent</a></span> 
+
+</dt>
+<dd>
+  Triggered when the list of cards is requested 
+</dd>
+
+        <dt id="MyCardsScreen">
+  <span class="name "><a href="../mycards.presentation/MyCardsScreen-class.html">MyCardsScreen</a></span> 
+
+</dt>
+<dd>
+  Screen: List of user's saved payment cards 
+</dd>
+
+        <dt id="MyCardsState">
+  <span class="name "><a href="../mycards.presentation/MyCardsState-class.html">MyCardsState</a></span> 
+
+</dt>
+<dd>
+  Abstract class to represent adding or editing card related states 
+</dd>
+
+        <dt id="NewCardAddedEvent">
+  <span class="name "><a href="../mycards.presentation/NewCardAddedEvent-class.html">NewCardAddedEvent</a></span> 
+
+</dt>
+<dd>
+  Triggered when a new card is added to list 
+</dd>
+
+        <dt id="PaymentCardContainer">
+  <span class="name "><a href="../mycards.presentation/PaymentCardContainer-class.html">PaymentCardContainer</a></span> 
+
+</dt>
+<dd>
+  Widget: Payment card container widget 
+</dd>
+
+        <dt id="TransactionCard">
+  <span class="name "><a href="../mycards.presentation/TransactionCard-class.html">TransactionCard</a></span> 
+
+</dt>
+<dd>
+   
+</dd>
+
+        <dt id="TransactionsBloc">
+  <span class="name "><a href="../mycards.presentation/TransactionsBloc-class.html">TransactionsBloc</a></span> 
+
+</dt>
+<dd>
+  Transactions bloc: Business logic component that manage <a href="../mycards.presentation/TransactionsState-class.html">TransactionsState</a> and handle <a href="../mycards.presentation/TransactionsEvent-class.html">TransactionsEvent</a> events 
+</dd>
+
+        <dt id="TransactionsErrorState">
+  <span class="name "><a href="../mycards.presentation/TransactionsErrorState-class.html">TransactionsErrorState</a></span> 
+
+</dt>
+<dd>
+  When an error has occurred during loading the list of transactions 
+</dd>
+
+        <dt id="TransactionsEvent">
+  <span class="name "><a href="../mycards.presentation/TransactionsEvent-class.html">TransactionsEvent</a></span> 
+
+</dt>
+<dd>
+  Abstract class to represent transactions list related events 
+</dd>
+
+        <dt id="TransactionsInitialState">
+  <span class="name "><a href="../mycards.presentation/TransactionsInitialState-class.html">TransactionsInitialState</a></span> 
+
+</dt>
+<dd>
+  Initial state (empty transactions list) 
+</dd>
+
+        <dt id="TransactionsList">
+  <span class="name "><a href="../mycards.presentation/TransactionsList-class.html">TransactionsList</a></span> 
+
+</dt>
+<dd>
+  Screen: List of selected card's transactions performed by the current user 
+</dd>
+
+        <dt id="TransactionsLoadedState">
+  <span class="name "><a href="../mycards.presentation/TransactionsLoadedState-class.html">TransactionsLoadedState</a></span> 
+
+</dt>
+<dd>
+  When the list is loaded 
+</dd>
+
+        <dt id="TransactionsLoadingState">
+  <span class="name "><a href="../mycards.presentation/TransactionsLoadingState-class.html">TransactionsLoadingState</a></span> 
+
+</dt>
+<dd>
+  When the transactions are loading 
+</dd>
+
+        <dt id="TransactionsRequestedEvent">
+  <span class="name "><a href="../mycards.presentation/TransactionsRequestedEvent-class.html">TransactionsRequestedEvent</a></span> 
+
+</dt>
+<dd>
+  Triggered when the list of transactions is requested 
+</dd>
+
+        <dt id="TransactionsState">
+  <span class="name "><a href="../mycards.presentation/TransactionsState-class.html">TransactionsState</a></span> 
+
+</dt>
+<dd>
+  Abstract class to represent transactions related states 
+</dd>
+
+      </dl>
+    </section>
+
+
+
+
+
+
+
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../index.html">wayfar</a></li>
+  <li class="self-crumb">mycards.presentation library</li>
+</ol>
+
+
+    <h5><span class="package-name">wayfar</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="../main/main-library.html">main</a></li>
+      <li class="section-subtitle">Authentication</li>
+        <li class="section-subitem"><a href="../authentication.data/authentication.data-library.html">authentication.data</a></li>
+        <li class="section-subitem"><a href="../authentication.domain/authentication.domain-library.html">authentication.domain</a></li>
+        <li class="section-subitem"><a href="../authentication.presentation/authentication.presentation-library.html">authentication.presentation</a></li>
+        <li class="section-subitem"><a href="../authentication.shared/authentication.shared-library.html">authentication.shared</a></li>
+      <li class="section-subtitle">Bookmarks</li>
+        <li class="section-subitem"><a href="../bookmarks.data/bookmarks.data-library.html">bookmarks.data</a></li>
+        <li class="section-subitem"><a href="../bookmarks.domain/bookmarks.domain-library.html">bookmarks.domain</a></li>
+        <li class="section-subitem"><a href="../bookmarks.presentation/bookmarks.presentation-library.html">bookmarks.presentation</a></li>
+      <li class="section-subtitle">Contact-us</li>
+        <li class="section-subitem"><a href="../contact_us.data/contact_us.data-library.html">contact_us.data</a></li>
+        <li class="section-subitem"><a href="../contact_us.domain/contact_us.domain-library.html">contact_us.domain</a></li>
+        <li class="section-subitem"><a href="../contact_us.presentation/contact_us.presentation-library.html">contact_us.presentation</a></li>
+      <li class="section-subtitle">Core</li>
+        <li class="section-subitem"><a href="../core/core-library.html">core</a></li>
+        <li class="section-subitem"><a href="../core.common/core.common-library.html">core.common</a></li>
+        <li class="section-subitem"><a href="../core.database/core.database-library.html">core.database</a></li>
+        <li class="section-subitem"><a href="../core.di/core.di-library.html">core.di</a></li>
+        <li class="section-subitem"><a href="../core.localization/core.localization-library.html">core.localization</a></li>
+        <li class="section-subitem"><a href="../core.location/core.location-library.html">core.location</a></li>
+        <li class="section-subitem"><a href="../core.navigation/core.navigation-library.html">core.navigation</a></li>
+        <li class="section-subitem"><a href="../core.storage/core.storage-library.html">core.storage</a></li>
+        <li class="section-subitem"><a href="../core.theme/core.theme-library.html">core.theme</a></li>
+      <li class="section-subtitle">Home</li>
+        <li class="section-subitem"><a href="../home.presentation/home.presentation-library.html">home.presentation</a></li>
+      <li class="section-subtitle">My cards</li>
+        <li class="section-subitem"><a href="../mycards.data/mycards.data-library.html">mycards.data</a></li>
+        <li class="section-subitem"><a href="../mycards.domain/mycards.domain-library.html">mycards.domain</a></li>
+        <li class="section-subitem"><a href="../mycards.presentation/mycards.presentation-library.html">mycards.presentation</a></li>
+      <li class="section-subtitle">Notifications</li>
+        <li class="section-subitem"><a href="../notifications.data/notifications.data-library.html">notifications.data</a></li>
+        <li class="section-subitem"><a href="../notifications.domain/notifications.domain-library.html">notifications.domain</a></li>
+        <li class="section-subitem"><a href="../notifications.presentation/notifications.presentation-library.html">notifications.presentation</a></li>
+      <li class="section-subtitle">OnBoarding</li>
+        <li class="section-subitem"><a href="../onboarding/onboarding-library.html">onboarding</a></li>
+      <li class="section-subtitle">Parkings</li>
+        <li class="section-subitem"><a href="../parkings.data/parkings.data-library.html">parkings.data</a></li>
+        <li class="section-subitem"><a href="../parkings.domain/parkings.domain-library.html">parkings.domain</a></li>
+        <li class="section-subitem"><a href="../parkings.presentation/parkings.presentation-library.html">parkings.presentation</a></li>
+      <li class="section-subtitle">Payment</li>
+        <li class="section-subitem"><a href="../payment.data/payment.data-library.html">payment.data</a></li>
+        <li class="section-subitem"><a href="../payment.domain/payment.domain-library.html">payment.domain</a></li>
+        <li class="section-subitem"><a href="../payment.presentation/payment.presentation-library.html">payment.presentation</a></li>
+        <li class="section-subitem"><a href="../payment.shared/payment.shared-library.html">payment.shared</a></li>
+      <li class="section-subtitle">Profile</li>
+        <li class="section-subitem"><a href="../profile.data/profile.data-library.html">profile.data</a></li>
+        <li class="section-subitem"><a href="../profile.domain/profile.domain-library.html">profile.domain</a></li>
+        <li class="section-subitem"><a href="../profile.presentation/profile.presentation-library.html">profile.presentation</a></li>
+      <li class="section-subtitle">Settings</li>
+        <li class="section-subitem"><a href="../settings/settings-library.html">settings</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <h5>mycards.presentation library</h5>
+    <ol>
+  <li class="section-title"><a href="../mycards.presentation/mycards.presentation-library.html#classes">Classes</a></li>
+  <li><a href="../mycards.presentation/AddCardRequested-class.html">AddCardRequested</a></li>
+  <li><a href="../mycards.presentation/AddCardSucceedState-class.html">AddCardSucceedState</a></li>
+  <li><a href="../mycards.presentation/AddOrEditCardBloc-class.html">AddOrEditCardBloc</a></li>
+  <li><a href="../mycards.presentation/AddOrEditCardErrorState-class.html">AddOrEditCardErrorState</a></li>
+  <li><a href="../mycards.presentation/AddOrEditCardEvent-class.html">AddOrEditCardEvent</a></li>
+  <li><a href="../mycards.presentation/AddOrEditCardInitialState-class.html">AddOrEditCardInitialState</a></li>
+  <li><a href="../mycards.presentation/AddOrEditCardLoadingState-class.html">AddOrEditCardLoadingState</a></li>
+  <li><a href="../mycards.presentation/AddOrEditCardModal-class.html">AddOrEditCardModal</a></li>
+  <li><a href="../mycards.presentation/AddOrEditCardState-class.html">AddOrEditCardState</a></li>
+  <li><a href="../mycards.presentation/AddTransactionEvent-class.html">AddTransactionEvent</a></li>
+  <li><a href="../mycards.presentation/CardEditedEvent-class.html">CardEditedEvent</a></li>
+  <li><a href="../mycards.presentation/DeleteCardEvent-class.html">DeleteCardEvent</a></li>
+  <li><a href="../mycards.presentation/EditCardRequested-class.html">EditCardRequested</a></li>
+  <li><a href="../mycards.presentation/EditCardSucceedState-class.html">EditCardSucceedState</a></li>
+  <li><a href="../mycards.presentation/MyCardsBloc-class.html">MyCardsBloc</a></li>
+  <li><a href="../mycards.presentation/MyCardsErrorState-class.html">MyCardsErrorState</a></li>
+  <li><a href="../mycards.presentation/MyCardsEvent-class.html">MyCardsEvent</a></li>
+  <li><a href="../mycards.presentation/MyCardsInitialState-class.html">MyCardsInitialState</a></li>
+  <li><a href="../mycards.presentation/MyCardsLoadedState-class.html">MyCardsLoadedState</a></li>
+  <li><a href="../mycards.presentation/MyCardsLoadingState-class.html">MyCardsLoadingState</a></li>
+  <li><a href="../mycards.presentation/MyCardsRequestedEvent-class.html">MyCardsRequestedEvent</a></li>
+  <li><a href="../mycards.presentation/MyCardsScreen-class.html">MyCardsScreen</a></li>
+  <li><a href="../mycards.presentation/MyCardsState-class.html">MyCardsState</a></li>
+  <li><a href="../mycards.presentation/NewCardAddedEvent-class.html">NewCardAddedEvent</a></li>
+  <li><a href="../mycards.presentation/PaymentCardContainer-class.html">PaymentCardContainer</a></li>
+  <li><a href="../mycards.presentation/TransactionCard-class.html">TransactionCard</a></li>
+  <li><a href="../mycards.presentation/TransactionsBloc-class.html">TransactionsBloc</a></li>
+  <li><a href="../mycards.presentation/TransactionsErrorState-class.html">TransactionsErrorState</a></li>
+  <li><a href="../mycards.presentation/TransactionsEvent-class.html">TransactionsEvent</a></li>
+  <li><a href="../mycards.presentation/TransactionsInitialState-class.html">TransactionsInitialState</a></li>
+  <li><a href="../mycards.presentation/TransactionsList-class.html">TransactionsList</a></li>
+  <li><a href="../mycards.presentation/TransactionsLoadedState-class.html">TransactionsLoadedState</a></li>
+  <li><a href="../mycards.presentation/TransactionsLoadingState-class.html">TransactionsLoadingState</a></li>
+  <li><a href="../mycards.presentation/TransactionsRequestedEvent-class.html">TransactionsRequestedEvent</a></li>
+  <li><a href="../mycards.presentation/TransactionsState-class.html">TransactionsState</a></li>
+
+
+
+
+
+
+
+
+</ol>
+
+  </div><!--/sidebar-offcanvas-right-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    wayfar
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/script.js?v1"></script>
+
+
+
+</body>
+
+</html>
+

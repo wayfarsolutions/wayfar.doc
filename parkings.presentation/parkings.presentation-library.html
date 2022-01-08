@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="parkings.presentation library API docs, for the Dart programming language.">
+  <title>parkings.presentation library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../"
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">wayfar</a></li>
+    <li class="self-crumb">parkings.presentation library</li>
+  </ol>
+  <div class="self-name">parkings.presentation</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-library">parkings.presentation</span> library 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Presentation layer for Parkings feature.</p>
+</section>
+
+
+    <section class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+
+      <dl>
+        <dt id="ActionOnParkingButton">
+  <span class="name "><a href="../parkings.presentation/ActionOnParkingButton-class.html">ActionOnParkingButton</a></span> 
+
+</dt>
+<dd>
+  Widget: Action button in parking details screen 
+</dd>
+
+        <dt id="DrawerToggler">
+  <span class="name "><a href="../parkings.presentation/DrawerToggler-class.html">DrawerToggler</a></span> 
+
+</dt>
+<dd>
+   
+</dd>
+
+        <dt id="FiltersModal">
+  <span class="name "><a href="../parkings.presentation/FiltersModal-class.html">FiltersModal</a></span> 
+
+</dt>
+<dd>
+  Screen: parking list filters page 
+</dd>
+
+        <dt id="GetAllServicesEvent">
+  <span class="name "><a href="../parkings.presentation/GetAllServicesEvent-class.html">GetAllServicesEvent</a></span> 
+
+</dt>
+<dd>
+  Fetch all services event 
+</dd>
+
+        <dt id="ParkingDetailBloc">
+  <span class="name "><a href="../parkings.presentation/ParkingDetailBloc-class.html">ParkingDetailBloc</a></span> 
+
+</dt>
+<dd>
+  Parking details business logic component, that manage <a href="../parkings.presentation/ParkingState-class.html">ParkingState</a> and handle <a href="../parkings.presentation/ParkingDetailEvent-class.html">ParkingDetailEvent</a> 
+</dd>
+
+        <dt id="ParkingDetailEvent">
+  <span class="name "><a href="../parkings.presentation/ParkingDetailEvent-class.html">ParkingDetailEvent</a></span> 
+
+</dt>
+<dd>
+  Parking details related events 
+</dd>
+
+        <dt id="ParkingDetailScreen">
+  <span class="name "><a href="../parkings.presentation/ParkingDetailScreen-class.html">ParkingDetailScreen</a></span> 
+
+</dt>
+<dd>
+  Screen: parking detail screen 
+</dd>
+
+        <dt id="ParkingErrorState">
+  <span class="name "><a href="../parkings.presentation/ParkingErrorState-class.html">ParkingErrorState</a></span> 
+
+</dt>
+<dd>
+  When an error has occurred suring loading parking details 
+</dd>
+
+        <dt id="ParkingFiltersBloc">
+  <span class="name "><a href="../parkings.presentation/ParkingFiltersBloc-class.html">ParkingFiltersBloc</a></span> 
+
+</dt>
+<dd>
+  Filters business logic componenet responsible for handingling flters state (<a href="../parkings.presentation/ParkingFiltersState-class.html">ParkingFiltersState</a>) 
+</dd>
+
+        <dt id="ParkingFiltersErrorState">
+  <span class="name "><a href="../parkings.presentation/ParkingFiltersErrorState-class.html">ParkingFiltersErrorState</a></span> 
+
+</dt>
+<dd>
+  Parking filters error state: when ane error has occured initializing the state 
+</dd>
+
+        <dt id="ParkingFiltersEvent">
+  <span class="name "><a href="../parkings.presentation/ParkingFiltersEvent-class.html">ParkingFiltersEvent</a></span> 
+
+</dt>
+<dd>
+  Filters related events 
+</dd>
+
+        <dt id="ParkingFiltersInitialState">
+  <span class="name "><a href="../parkings.presentation/ParkingFiltersInitialState-class.html">ParkingFiltersInitialState</a></span> 
+
+</dt>
+<dd>
+  Parking filters initial state 
+</dd>
+
+        <dt id="ParkingFiltersLoadingState">
+  <span class="name "><a href="../parkings.presentation/ParkingFiltersLoadingState-class.html">ParkingFiltersLoadingState</a></span> 
+
+</dt>
+<dd>
+  Parking filters loading state (initializing in progress) 
+</dd>
+
+        <dt id="ParkingFiltersReadyState">
+  <span class="name "><a href="../parkings.presentation/ParkingFiltersReadyState-class.html">ParkingFiltersReadyState</a></span> 
+
+</dt>
+<dd>
+  Parking filters ready state (state initialized) 
+</dd>
+
+        <dt id="ParkingFiltersState">
+  <span class="name "><a href="../parkings.presentation/ParkingFiltersState-class.html">ParkingFiltersState</a></span> 
+
+</dt>
+<dd>
+  Parking filters related state 
+</dd>
+
+        <dt id="ParkingInitialState">
+  <span class="name "><a href="../parkings.presentation/ParkingInitialState-class.html">ParkingInitialState</a></span> 
+
+</dt>
+<dd>
+  Parking details initial state 
+</dd>
+
+        <dt id="ParkingListItem">
+  <span class="name "><a href="../parkings.presentation/ParkingListItem-class.html">ParkingListItem</a></span> 
+
+</dt>
+<dd>
+  Widget: Parking list single item 
+</dd>
+
+        <dt id="ParkingLoadedState">
+  <span class="name "><a href="../parkings.presentation/ParkingLoadedState-class.html">ParkingLoadedState</a></span> 
+
+</dt>
+<dd>
+  When the details are loaded 
+</dd>
+
+        <dt id="ParkingLoadingState">
+  <span class="name "><a href="../parkings.presentation/ParkingLoadingState-class.html">ParkingLoadingState</a></span> 
+
+</dt>
+<dd>
+  Parking details loading state 
+</dd>
+
+        <dt id="ParkingMapItem">
+  <span class="name "><a href="../parkings.presentation/ParkingMapItem-class.html">ParkingMapItem</a></span> 
+
+</dt>
+<dd>
+  Widget: Parking map single item (Card) 
+</dd>
+
+        <dt id="ParkingsBloc">
+  <span class="name "><a href="../parkings.presentation/ParkingsBloc-class.html">ParkingsBloc</a></span> 
+
+</dt>
+<dd>
+  List of parking business logic component 
+</dd>
+
+        <dt id="ParkingScreenLoadedEvent">
+  <span class="name "><a href="../parkings.presentation/ParkingScreenLoadedEvent-class.html">ParkingScreenLoadedEvent</a></span> 
+
+</dt>
+<dd>
+  When the details of a single parking is loaded 
+</dd>
+
+        <dt id="ParkingsErrorState">
+  <span class="name "><a href="../parkings.presentation/ParkingsErrorState-class.html">ParkingsErrorState</a></span> 
+
+</dt>
+<dd>
+  When an error has occured during loading list of parkings 
+</dd>
+
+        <dt id="ParkingServiceChip">
+  <span class="name "><a href="../parkings.presentation/ParkingServiceChip-class.html">ParkingServiceChip</a></span> 
+
+</dt>
+<dd>
+  Widget: A custom tag for parking services 
+</dd>
+
+        <dt id="ParkingsEvent">
+  <span class="name "><a href="../parkings.presentation/ParkingsEvent-class.html">ParkingsEvent</a></span> 
+
+</dt>
+<dd>
+  List of parking related events 
+</dd>
+
+        <dt id="ParkingsInitialState">
+  <span class="name "><a href="../parkings.presentation/ParkingsInitialState-class.html">ParkingsInitialState</a></span> 
+
+</dt>
+<dd>
+  Parkings list initial state 
+</dd>
+
+        <dt id="ParkingsListScreen">
+  <span class="name "><a href="../parkings.presentation/ParkingsListScreen-class.html">ParkingsListScreen</a></span> 
+
+</dt>
+<dd>
+  Screen: parkings list view 
+</dd>
+
+        <dt id="ParkingsLoadedState">
+  <span class="name "><a href="../parkings.presentation/ParkingsLoadedState-class.html">ParkingsLoadedState</a></span> 
+
+</dt>
+<dd>
+  When list of parkings is loaded 
+</dd>
+
+        <dt id="ParkingsLoadingState">
+  <span class="name "><a href="../parkings.presentation/ParkingsLoadingState-class.html">ParkingsLoadingState</a></span> 
+
+</dt>
+<dd>
+  Parkings list loading state 
+</dd>
+
+        <dt id="ParkingsMapScreen">
+  <span class="name "><a href="../parkings.presentation/ParkingsMapScreen-class.html">ParkingsMapScreen</a></span> 
+
+</dt>
+<dd>
+  Screen: parkings map view 
+</dd>
+
+        <dt id="ParkingsRequestedEvent">
+  <span class="name "><a href="../parkings.presentation/ParkingsRequestedEvent-class.html">ParkingsRequestedEvent</a></span> 
+
+</dt>
+<dd>
+  An event to trigger to request the list of parking (with optional filters) 
+</dd>
+
+        <dt id="ParkingsScreen">
+  <span class="name "><a href="../parkings.presentation/ParkingsScreen-class.html">ParkingsScreen</a></span> 
+
+</dt>
+<dd>
+  Screen: parkings (list/map) view pager 
+</dd>
+
+        <dt id="ParkingsState">
+  <span class="name "><a href="../parkings.presentation/ParkingsState-class.html">ParkingsState</a></span> 
+
+</dt>
+<dd>
+  Parkings list related states 
+</dd>
+
+        <dt id="ParkingState">
+  <span class="name "><a href="../parkings.presentation/ParkingState-class.html">ParkingState</a></span> 
+
+</dt>
+<dd>
+  Parking details related states 
+</dd>
+
+        <dt id="ViewToggler">
+  <span class="name "><a href="../parkings.presentation/ViewToggler-class.html">ViewToggler</a></span> 
+
+</dt>
+<dd>
+   
+</dd>
+
+      </dl>
+    </section>
+
+
+
+
+
+    <section class="summary offset-anchor" id="functions">
+      <h2>Functions</h2>
+
+      <dl class="callables">
+        <dt id="drawParkingMarker" class="callable">
+  <span class="name"><a href="../parkings.presentation/drawParkingMarker.html">drawParkingMarker</a></span><span class="signature">(<wbr><span class="parameter" id="drawParkingMarker-param-theme"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/material/ThemeData-class.html">ThemeData</a></span> <span class="parameter-name">theme</span>, </span><span class="parameter" id="drawParkingMarker-param-parking"><span class="type-annotation"><a href="../parkings.domain/Parking-class.html">Parking</a></span> <span class="parameter-name">parking</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/google_maps_flutter_platform_interface/2.1.1/google_maps_flutter_platform_interface/BitmapDescriptor-class.html">BitmapDescriptor</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Draw a marker (for the parking) and return a <a href="https://pub.dev/documentation/google_maps_flutter_platform_interface/2.1.1/google_maps_flutter_platform_interface/BitmapDescriptor-class.html">BitmapDescriptor</a> to use in the map view 
+  
+
+</dd>
+
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="enums">
+      <h2>Enums</h2>
+
+      <dl>
+        <dt id="ViewType">
+  <span class="name "><a href="../parkings.presentation/ViewType.html">ViewType</a></span> 
+
+</dt>
+<dd>
+   
+</dd>
+
+      </dl>
+    </section>
+
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../index.html">wayfar</a></li>
+  <li class="self-crumb">parkings.presentation library</li>
+</ol>
+
+
+    <h5><span class="package-name">wayfar</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="../main/main-library.html">main</a></li>
+      <li class="section-subtitle">Authentication</li>
+        <li class="section-subitem"><a href="../authentication.data/authentication.data-library.html">authentication.data</a></li>
+        <li class="section-subitem"><a href="../authentication.domain/authentication.domain-library.html">authentication.domain</a></li>
+        <li class="section-subitem"><a href="../authentication.presentation/authentication.presentation-library.html">authentication.presentation</a></li>
+        <li class="section-subitem"><a href="../authentication.shared/authentication.shared-library.html">authentication.shared</a></li>
+      <li class="section-subtitle">Bookmarks</li>
+        <li class="section-subitem"><a href="../bookmarks.data/bookmarks.data-library.html">bookmarks.data</a></li>
+        <li class="section-subitem"><a href="../bookmarks.domain/bookmarks.domain-library.html">bookmarks.domain</a></li>
+        <li class="section-subitem"><a href="../bookmarks.presentation/bookmarks.presentation-library.html">bookmarks.presentation</a></li>
+      <li class="section-subtitle">Contact-us</li>
+        <li class="section-subitem"><a href="../contact_us.data/contact_us.data-library.html">contact_us.data</a></li>
+        <li class="section-subitem"><a href="../contact_us.domain/contact_us.domain-library.html">contact_us.domain</a></li>
+        <li class="section-subitem"><a href="../contact_us.presentation/contact_us.presentation-library.html">contact_us.presentation</a></li>
+      <li class="section-subtitle">Core</li>
+        <li class="section-subitem"><a href="../core/core-library.html">core</a></li>
+        <li class="section-subitem"><a href="../core.common/core.common-library.html">core.common</a></li>
+        <li class="section-subitem"><a href="../core.database/core.database-library.html">core.database</a></li>
+        <li class="section-subitem"><a href="../core.di/core.di-library.html">core.di</a></li>
+        <li class="section-subitem"><a href="../core.localization/core.localization-library.html">core.localization</a></li>
+        <li class="section-subitem"><a href="../core.location/core.location-library.html">core.location</a></li>
+        <li class="section-subitem"><a href="../core.navigation/core.navigation-library.html">core.navigation</a></li>
+        <li class="section-subitem"><a href="../core.storage/core.storage-library.html">core.storage</a></li>
+        <li class="section-subitem"><a href="../core.theme/core.theme-library.html">core.theme</a></li>
+      <li class="section-subtitle">Home</li>
+        <li class="section-subitem"><a href="../home.presentation/home.presentation-library.html">home.presentation</a></li>
+      <li class="section-subtitle">My cards</li>
+        <li class="section-subitem"><a href="../mycards.data/mycards.data-library.html">mycards.data</a></li>
+        <li class="section-subitem"><a href="../mycards.domain/mycards.domain-library.html">mycards.domain</a></li>
+        <li class="section-subitem"><a href="../mycards.presentation/mycards.presentation-library.html">mycards.presentation</a></li>
+      <li class="section-subtitle">Notifications</li>
+        <li class="section-subitem"><a href="../notifications.data/notifications.data-library.html">notifications.data</a></li>
+        <li class="section-subitem"><a href="../notifications.domain/notifications.domain-library.html">notifications.domain</a></li>
+        <li class="section-subitem"><a href="../notifications.presentation/notifications.presentation-library.html">notifications.presentation</a></li>
+      <li class="section-subtitle">OnBoarding</li>
+        <li class="section-subitem"><a href="../onboarding/onboarding-library.html">onboarding</a></li>
+      <li class="section-subtitle">Parkings</li>
+        <li class="section-subitem"><a href="../parkings.data/parkings.data-library.html">parkings.data</a></li>
+        <li class="section-subitem"><a href="../parkings.domain/parkings.domain-library.html">parkings.domain</a></li>
+        <li class="section-subitem"><a href="../parkings.presentation/parkings.presentation-library.html">parkings.presentation</a></li>
+      <li class="section-subtitle">Payment</li>
+        <li class="section-subitem"><a href="../payment.data/payment.data-library.html">payment.data</a></li>
+        <li class="section-subitem"><a href="../payment.domain/payment.domain-library.html">payment.domain</a></li>
+        <li class="section-subitem"><a href="../payment.presentation/payment.presentation-library.html">payment.presentation</a></li>
+        <li class="section-subitem"><a href="../payment.shared/payment.shared-library.html">payment.shared</a></li>
+      <li class="section-subtitle">Profile</li>
+        <li class="section-subitem"><a href="../profile.data/profile.data-library.html">profile.data</a></li>
+        <li class="section-subitem"><a href="../profile.domain/profile.domain-library.html">profile.domain</a></li>
+        <li class="section-subitem"><a href="../profile.presentation/profile.presentation-library.html">profile.presentation</a></li>
+      <li class="section-subtitle">Settings</li>
+        <li class="section-subitem"><a href="../settings/settings-library.html">settings</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <h5>parkings.presentation library</h5>
+    <ol>
+  <li class="section-title"><a href="../parkings.presentation/parkings.presentation-library.html#classes">Classes</a></li>
+  <li><a href="../parkings.presentation/ActionOnParkingButton-class.html">ActionOnParkingButton</a></li>
+  <li><a href="../parkings.presentation/DrawerToggler-class.html">DrawerToggler</a></li>
+  <li><a href="../parkings.presentation/FiltersModal-class.html">FiltersModal</a></li>
+  <li><a href="../parkings.presentation/GetAllServicesEvent-class.html">GetAllServicesEvent</a></li>
+  <li><a href="../parkings.presentation/ParkingDetailBloc-class.html">ParkingDetailBloc</a></li>
+  <li><a href="../parkings.presentation/ParkingDetailEvent-class.html">ParkingDetailEvent</a></li>
+  <li><a href="../parkings.presentation/ParkingDetailScreen-class.html">ParkingDetailScreen</a></li>
+  <li><a href="../parkings.presentation/ParkingErrorState-class.html">ParkingErrorState</a></li>
+  <li><a href="../parkings.presentation/ParkingFiltersBloc-class.html">ParkingFiltersBloc</a></li>
+  <li><a href="../parkings.presentation/ParkingFiltersErrorState-class.html">ParkingFiltersErrorState</a></li>
+  <li><a href="../parkings.presentation/ParkingFiltersEvent-class.html">ParkingFiltersEvent</a></li>
+  <li><a href="../parkings.presentation/ParkingFiltersInitialState-class.html">ParkingFiltersInitialState</a></li>
+  <li><a href="../parkings.presentation/ParkingFiltersLoadingState-class.html">ParkingFiltersLoadingState</a></li>
+  <li><a href="../parkings.presentation/ParkingFiltersReadyState-class.html">ParkingFiltersReadyState</a></li>
+  <li><a href="../parkings.presentation/ParkingFiltersState-class.html">ParkingFiltersState</a></li>
+  <li><a href="../parkings.presentation/ParkingInitialState-class.html">ParkingInitialState</a></li>
+  <li><a href="../parkings.presentation/ParkingListItem-class.html">ParkingListItem</a></li>
+  <li><a href="../parkings.presentation/ParkingLoadedState-class.html">ParkingLoadedState</a></li>
+  <li><a href="../parkings.presentation/ParkingLoadingState-class.html">ParkingLoadingState</a></li>
+  <li><a href="../parkings.presentation/ParkingMapItem-class.html">ParkingMapItem</a></li>
+  <li><a href="../parkings.presentation/ParkingsBloc-class.html">ParkingsBloc</a></li>
+  <li><a href="../parkings.presentation/ParkingScreenLoadedEvent-class.html">ParkingScreenLoadedEvent</a></li>
+  <li><a href="../parkings.presentation/ParkingsErrorState-class.html">ParkingsErrorState</a></li>
+  <li><a href="../parkings.presentation/ParkingServiceChip-class.html">ParkingServiceChip</a></li>
+  <li><a href="../parkings.presentation/ParkingsEvent-class.html">ParkingsEvent</a></li>
+  <li><a href="../parkings.presentation/ParkingsInitialState-class.html">ParkingsInitialState</a></li>
+  <li><a href="../parkings.presentation/ParkingsListScreen-class.html">ParkingsListScreen</a></li>
+  <li><a href="../parkings.presentation/ParkingsLoadedState-class.html">ParkingsLoadedState</a></li>
+  <li><a href="../parkings.presentation/ParkingsLoadingState-class.html">ParkingsLoadingState</a></li>
+  <li><a href="../parkings.presentation/ParkingsMapScreen-class.html">ParkingsMapScreen</a></li>
+  <li><a href="../parkings.presentation/ParkingsRequestedEvent-class.html">ParkingsRequestedEvent</a></li>
+  <li><a href="../parkings.presentation/ParkingsScreen-class.html">ParkingsScreen</a></li>
+  <li><a href="../parkings.presentation/ParkingsState-class.html">ParkingsState</a></li>
+  <li><a href="../parkings.presentation/ParkingState-class.html">ParkingState</a></li>
+  <li><a href="../parkings.presentation/ViewToggler-class.html">ViewToggler</a></li>
+
+
+
+
+
+  <li class="section-title"><a href="../parkings.presentation/parkings.presentation-library.html#functions">Functions</a></li>
+  <li><a href="../parkings.presentation/drawParkingMarker.html">drawParkingMarker</a></li>
+
+  <li class="section-title"><a href="../parkings.presentation/parkings.presentation-library.html#enums">Enums</a></li>
+  <li><a href="../parkings.presentation/ViewType.html">ViewType</a></li>
+
+
+</ol>
+
+  </div><!--/sidebar-offcanvas-right-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    wayfar
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/script.js?v1"></script>
+
+
+
+</body>
+
+</html>
+

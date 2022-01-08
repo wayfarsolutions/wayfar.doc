@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="authentication.presentation library API docs, for the Dart programming language.">
+  <title>authentication.presentation library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../"
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">wayfar</a></li>
+    <li class="self-crumb">authentication.presentation library</li>
+  </ol>
+  <div class="self-name">authentication.presentation</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-library">authentication.presentation</span> library 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Presentation layer for Authentication feature.</p>
+</section>
+
+
+    <section class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+
+      <dl>
+        <dt id="AppStarted">
+  <span class="name "><a href="../authentication.presentation/AppStarted-class.html">AppStarted</a></span> 
+
+</dt>
+<dd>
+  The event that is triggered when app is started 
+</dd>
+
+        <dt id="Authenticated">
+  <span class="name "><a href="../authentication.presentation/Authenticated-class.html">Authenticated</a></span> 
+
+</dt>
+<dd>
+  Authenticated state : when the user is authenticated 
+</dd>
+
+        <dt id="AuthenticationBloc">
+  <span class="name "><a href="../authentication.presentation/AuthenticationBloc-class.html">AuthenticationBloc</a></span> 
+
+</dt>
+<dd>
+  Authentication bloc, Business logic component that manage <a href="../authentication.presentation/AuthenticationState-class.html">AuthenticationState</a> and handle <a href="../authentication.presentation/AuthenticationEvent-class.html">AuthenticationEvent</a> events
+Note: The <a href="../authentication.presentation/SignInBloc-class.html">SignInBloc</a> and <a href="../authentication.presentation/AuthenticationBloc-class.html">AuthenticationBloc</a> has two different roles: <a href="../authentication.presentation/AuthenticationBloc-class.html">AuthenticationBloc</a> is used to manage authentication state
+of user in the whole application, while <a href="../authentication.presentation/SignInBloc-class.html">SignInBloc</a> handle the state of the sign in operation at the sign in. 
+</dd>
+
+        <dt id="AuthenticationEvent">
+  <span class="name "><a href="../authentication.presentation/AuthenticationEvent-class.html">AuthenticationEvent</a></span> 
+
+</dt>
+<dd>
+  Abstract class to represent authentication events 
+</dd>
+
+        <dt id="AuthenticationState">
+  <span class="name "><a href="../authentication.presentation/AuthenticationState-class.html">AuthenticationState</a></span> 
+
+</dt>
+<dd>
+  Abstract class to represent authentication state 
+</dd>
+
+        <dt id="ChangePasswordScreen">
+  <span class="name "><a href="../authentication.presentation/ChangePasswordScreen-class.html">ChangePasswordScreen</a></span> 
+
+</dt>
+<dd>
+  Screen: Allows users to change the password 
+</dd>
+
+        <dt id="CheckEmailScreen">
+  <span class="name "><a href="../authentication.presentation/CheckEmailScreen-class.html">CheckEmailScreen</a></span> 
+
+</dt>
+<dd>
+  Screen: Is shown when a confirmation email has been sent 
+</dd>
+
+        <dt id="ForgotPasswordScreen">
+  <span class="name "><a href="../authentication.presentation/ForgotPasswordScreen-class.html">ForgotPasswordScreen</a></span> 
+
+</dt>
+<dd>
+  Screen: Is shown when the user wants to reset his password 
+</dd>
+
+        <dt id="LoggedIn">
+  <span class="name "><a href="../authentication.presentation/LoggedIn-class.html">LoggedIn</a></span> 
+
+</dt>
+<dd>
+  The event that is triggered when a user is successfully logged in 
+</dd>
+
+        <dt id="LoggedOut">
+  <span class="name "><a href="../authentication.presentation/LoggedOut-class.html">LoggedOut</a></span> 
+
+</dt>
+<dd>
+  The event that is triggered when a user is logged out 
+</dd>
+
+        <dt id="RegisterBloc">
+  <span class="name "><a href="../authentication.presentation/RegisterBloc-class.html">RegisterBloc</a></span> 
+
+</dt>
+<dd>
+  Register bloc, Business logic component that manage <a href="../authentication.presentation/RegisterState-class.html">RegisterState</a> and handle <a href="../authentication.presentation/RegisterEvent-class.html">RegisterEvent</a> events 
+</dd>
+
+        <dt id="RegisterErrorState">
+  <span class="name "><a href="../authentication.presentation/RegisterErrorState-class.html">RegisterErrorState</a></span> 
+
+</dt>
+<dd>
+  Error state: when the register operation fails 
+</dd>
+
+        <dt id="RegisterEvent">
+  <span class="name "><a href="../authentication.presentation/RegisterEvent-class.html">RegisterEvent</a></span> 
+
+</dt>
+<dd>
+  Abstract class to represent register events 
+</dd>
+
+        <dt id="RegisterForm">
+  <span class="name "><a href="../authentication.presentation/RegisterForm-class.html">RegisterForm</a></span> 
+
+</dt>
+<dd>
+   
+</dd>
+
+        <dt id="RegisterInitialState">
+  <span class="name "><a href="../authentication.presentation/RegisterInitialState-class.html">RegisterInitialState</a></span> 
+
+</dt>
+<dd>
+  Initial state: the default state 
+</dd>
+
+        <dt id="RegisterLoadingState">
+  <span class="name "><a href="../authentication.presentation/RegisterLoadingState-class.html">RegisterLoadingState</a></span> 
+
+</dt>
+<dd>
+  Loading state: when the register operation is loading (in progress) 
+</dd>
+
+        <dt id="RegisterScreen">
+  <span class="name "><a href="../authentication.presentation/RegisterScreen-class.html">RegisterScreen</a></span> 
+
+</dt>
+<dd>
+  Screen: Allows the user to register an account 
+</dd>
+
+        <dt id="RegisterState">
+  <span class="name "><a href="../authentication.presentation/RegisterState-class.html">RegisterState</a></span> 
+
+</dt>
+<dd>
+  Abstract class to represent the registration operation 
+</dd>
+
+        <dt id="RegisterSubmitEvent">
+  <span class="name "><a href="../authentication.presentation/RegisterSubmitEvent-class.html">RegisterSubmitEvent</a></span> 
+
+</dt>
+<dd>
+  This event is triggered when the user submit the registration form 
+</dd>
+
+        <dt id="RegisterSuccesfulState">
+  <span class="name "><a href="../authentication.presentation/RegisterSuccesfulState-class.html">RegisterSuccesfulState</a></span> 
+
+</dt>
+<dd>
+  Successfuly state: when the user is registered successfully (new user is created) 
+</dd>
+
+        <dt id="SignInBloc">
+  <span class="name "><a href="../authentication.presentation/SignInBloc-class.html">SignInBloc</a></span> 
+
+</dt>
+<dd>
+  Sing in bloc, Business logic component that manage <a href="../authentication.presentation/SignInState-class.html">SignInState</a> and handle <a href="../authentication.presentation/SignInEvent-class.html">SignInEvent</a> events 
+</dd>
+
+        <dt id="SignInErrorState">
+  <span class="name "><a href="../authentication.presentation/SignInErrorState-class.html">SignInErrorState</a></span> 
+
+</dt>
+<dd>
+  SignInInitialState : error state if the sign in operation fails 
+</dd>
+
+        <dt id="SignInEvent">
+  <span class="name "><a href="../authentication.presentation/SignInEvent-class.html">SignInEvent</a></span> 
+
+</dt>
+<dd>
+  Abstract class to represent Sign in events 
+</dd>
+
+        <dt id="SignInFinishedState">
+  <span class="name "><a href="../authentication.presentation/SignInFinishedState-class.html">SignInFinishedState</a></span> 
+
+</dt>
+<dd>
+  SignInInitialState : Successful state if the user login successfully 
+</dd>
+
+        <dt id="SignInForm">
+  <span class="name "><a href="../authentication.presentation/SignInForm-class.html">SignInForm</a></span> 
+
+</dt>
+<dd>
+   
+</dd>
+
+        <dt id="SignInInitialState">
+  <span class="name "><a href="../authentication.presentation/SignInInitialState-class.html">SignInInitialState</a></span> 
+
+</dt>
+<dd>
+  SignInInitialState : initial state of the sign in operation 
+</dd>
+
+        <dt id="SignInPressed">
+  <span class="name "><a href="../authentication.presentation/SignInPressed-class.html">SignInPressed</a></span> 
+
+</dt>
+<dd>
+  The event that is triggered when user tries to sign in using a username and a password 
+</dd>
+
+        <dt id="SignInPressedFacebook">
+  <span class="name "><a href="../authentication.presentation/SignInPressedFacebook-class.html">SignInPressedFacebook</a></span> 
+
+</dt>
+<dd>
+  The event that is triggered when user tries to sign in using Facebook provider 
+</dd>
+
+        <dt id="SignInPressedGoogle">
+  <span class="name "><a href="../authentication.presentation/SignInPressedGoogle-class.html">SignInPressedGoogle</a></span> 
+
+</dt>
+<dd>
+  The event that is triggered when user tries to sign in using Google provider 
+</dd>
+
+        <dt id="SignInPressedTwitter">
+  <span class="name "><a href="../authentication.presentation/SignInPressedTwitter-class.html">SignInPressedTwitter</a></span> 
+
+</dt>
+<dd>
+  The event that is triggered when user tries to sign in using Twitter provider 
+</dd>
+
+        <dt id="SignInProcessingState">
+  <span class="name "><a href="../authentication.presentation/SignInProcessingState-class.html">SignInProcessingState</a></span> 
+
+</dt>
+<dd>
+  SignInInitialState : loading (in progress) state of the sign in operation 
+</dd>
+
+        <dt id="SignInProviderButton">
+  <span class="name "><a href="../authentication.presentation/SignInProviderButton-class.html">SignInProviderButton</a></span> 
+
+</dt>
+<dd>
+  Widget: A circular button created for social login action (contains provider icon) 
+</dd>
+
+        <dt id="SignInScreen">
+  <span class="name "><a href="../authentication.presentation/SignInScreen-class.html">SignInScreen</a></span> 
+
+</dt>
+<dd>
+  Screen: Allows the user to login using username and password or using social login (Facebook, Google, Twitter) 
+</dd>
+
+        <dt id="SignInState">
+  <span class="name "><a href="../authentication.presentation/SignInState-class.html">SignInState</a></span> 
+
+</dt>
+<dd>
+  Abstract class to represent Sign in state 
+</dd>
+
+        <dt id="Unauthenticated">
+  <span class="name "><a href="../authentication.presentation/Unauthenticated-class.html">Unauthenticated</a></span> 
+
+</dt>
+<dd>
+  Unauthenticated state : when the user is not authenticated 
+</dd>
+
+        <dt id="Uninitialized">
+  <span class="name "><a href="../authentication.presentation/Uninitialized-class.html">Uninitialized</a></span> 
+
+</dt>
+<dd>
+  Uninitialized state of authentication, (initial state when app is started) 
+</dd>
+
+      </dl>
+    </section>
+
+
+
+
+
+
+
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../index.html">wayfar</a></li>
+  <li class="self-crumb">authentication.presentation library</li>
+</ol>
+
+
+    <h5><span class="package-name">wayfar</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="../main/main-library.html">main</a></li>
+      <li class="section-subtitle">Authentication</li>
+        <li class="section-subitem"><a href="../authentication.data/authentication.data-library.html">authentication.data</a></li>
+        <li class="section-subitem"><a href="../authentication.domain/authentication.domain-library.html">authentication.domain</a></li>
+        <li class="section-subitem"><a href="../authentication.presentation/authentication.presentation-library.html">authentication.presentation</a></li>
+        <li class="section-subitem"><a href="../authentication.shared/authentication.shared-library.html">authentication.shared</a></li>
+      <li class="section-subtitle">Bookmarks</li>
+        <li class="section-subitem"><a href="../bookmarks.data/bookmarks.data-library.html">bookmarks.data</a></li>
+        <li class="section-subitem"><a href="../bookmarks.domain/bookmarks.domain-library.html">bookmarks.domain</a></li>
+        <li class="section-subitem"><a href="../bookmarks.presentation/bookmarks.presentation-library.html">bookmarks.presentation</a></li>
+      <li class="section-subtitle">Contact-us</li>
+        <li class="section-subitem"><a href="../contact_us.data/contact_us.data-library.html">contact_us.data</a></li>
+        <li class="section-subitem"><a href="../contact_us.domain/contact_us.domain-library.html">contact_us.domain</a></li>
+        <li class="section-subitem"><a href="../contact_us.presentation/contact_us.presentation-library.html">contact_us.presentation</a></li>
+      <li class="section-subtitle">Core</li>
+        <li class="section-subitem"><a href="../core/core-library.html">core</a></li>
+        <li class="section-subitem"><a href="../core.common/core.common-library.html">core.common</a></li>
+        <li class="section-subitem"><a href="../core.database/core.database-library.html">core.database</a></li>
+        <li class="section-subitem"><a href="../core.di/core.di-library.html">core.di</a></li>
+        <li class="section-subitem"><a href="../core.localization/core.localization-library.html">core.localization</a></li>
+        <li class="section-subitem"><a href="../core.location/core.location-library.html">core.location</a></li>
+        <li class="section-subitem"><a href="../core.navigation/core.navigation-library.html">core.navigation</a></li>
+        <li class="section-subitem"><a href="../core.storage/core.storage-library.html">core.storage</a></li>
+        <li class="section-subitem"><a href="../core.theme/core.theme-library.html">core.theme</a></li>
+      <li class="section-subtitle">Home</li>
+        <li class="section-subitem"><a href="../home.presentation/home.presentation-library.html">home.presentation</a></li>
+      <li class="section-subtitle">My cards</li>
+        <li class="section-subitem"><a href="../mycards.data/mycards.data-library.html">mycards.data</a></li>
+        <li class="section-subitem"><a href="../mycards.domain/mycards.domain-library.html">mycards.domain</a></li>
+        <li class="section-subitem"><a href="../mycards.presentation/mycards.presentation-library.html">mycards.presentation</a></li>
+      <li class="section-subtitle">Notifications</li>
+        <li class="section-subitem"><a href="../notifications.data/notifications.data-library.html">notifications.data</a></li>
+        <li class="section-subitem"><a href="../notifications.domain/notifications.domain-library.html">notifications.domain</a></li>
+        <li class="section-subitem"><a href="../notifications.presentation/notifications.presentation-library.html">notifications.presentation</a></li>
+      <li class="section-subtitle">OnBoarding</li>
+        <li class="section-subitem"><a href="../onboarding/onboarding-library.html">onboarding</a></li>
+      <li class="section-subtitle">Parkings</li>
+        <li class="section-subitem"><a href="../parkings.data/parkings.data-library.html">parkings.data</a></li>
+        <li class="section-subitem"><a href="../parkings.domain/parkings.domain-library.html">parkings.domain</a></li>
+        <li class="section-subitem"><a href="../parkings.presentation/parkings.presentation-library.html">parkings.presentation</a></li>
+      <li class="section-subtitle">Payment</li>
+        <li class="section-subitem"><a href="../payment.data/payment.data-library.html">payment.data</a></li>
+        <li class="section-subitem"><a href="../payment.domain/payment.domain-library.html">payment.domain</a></li>
+        <li class="section-subitem"><a href="../payment.presentation/payment.presentation-library.html">payment.presentation</a></li>
+        <li class="section-subitem"><a href="../payment.shared/payment.shared-library.html">payment.shared</a></li>
+      <li class="section-subtitle">Profile</li>
+        <li class="section-subitem"><a href="../profile.data/profile.data-library.html">profile.data</a></li>
+        <li class="section-subitem"><a href="../profile.domain/profile.domain-library.html">profile.domain</a></li>
+        <li class="section-subitem"><a href="../profile.presentation/profile.presentation-library.html">profile.presentation</a></li>
+      <li class="section-subtitle">Settings</li>
+        <li class="section-subitem"><a href="../settings/settings-library.html">settings</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <h5>authentication.presentation library</h5>
+    <ol>
+  <li class="section-title"><a href="../authentication.presentation/authentication.presentation-library.html#classes">Classes</a></li>
+  <li><a href="../authentication.presentation/AppStarted-class.html">AppStarted</a></li>
+  <li><a href="../authentication.presentation/Authenticated-class.html">Authenticated</a></li>
+  <li><a href="../authentication.presentation/AuthenticationBloc-class.html">AuthenticationBloc</a></li>
+  <li><a href="../authentication.presentation/AuthenticationEvent-class.html">AuthenticationEvent</a></li>
+  <li><a href="../authentication.presentation/AuthenticationState-class.html">AuthenticationState</a></li>
+  <li><a href="../authentication.presentation/ChangePasswordScreen-class.html">ChangePasswordScreen</a></li>
+  <li><a href="../authentication.presentation/CheckEmailScreen-class.html">CheckEmailScreen</a></li>
+  <li><a href="../authentication.presentation/ForgotPasswordScreen-class.html">ForgotPasswordScreen</a></li>
+  <li><a href="../authentication.presentation/LoggedIn-class.html">LoggedIn</a></li>
+  <li><a href="../authentication.presentation/LoggedOut-class.html">LoggedOut</a></li>
+  <li><a href="../authentication.presentation/RegisterBloc-class.html">RegisterBloc</a></li>
+  <li><a href="../authentication.presentation/RegisterErrorState-class.html">RegisterErrorState</a></li>
+  <li><a href="../authentication.presentation/RegisterEvent-class.html">RegisterEvent</a></li>
+  <li><a href="../authentication.presentation/RegisterForm-class.html">RegisterForm</a></li>
+  <li><a href="../authentication.presentation/RegisterInitialState-class.html">RegisterInitialState</a></li>
+  <li><a href="../authentication.presentation/RegisterLoadingState-class.html">RegisterLoadingState</a></li>
+  <li><a href="../authentication.presentation/RegisterScreen-class.html">RegisterScreen</a></li>
+  <li><a href="../authentication.presentation/RegisterState-class.html">RegisterState</a></li>
+  <li><a href="../authentication.presentation/RegisterSubmitEvent-class.html">RegisterSubmitEvent</a></li>
+  <li><a href="../authentication.presentation/RegisterSuccesfulState-class.html">RegisterSuccesfulState</a></li>
+  <li><a href="../authentication.presentation/SignInBloc-class.html">SignInBloc</a></li>
+  <li><a href="../authentication.presentation/SignInErrorState-class.html">SignInErrorState</a></li>
+  <li><a href="../authentication.presentation/SignInEvent-class.html">SignInEvent</a></li>
+  <li><a href="../authentication.presentation/SignInFinishedState-class.html">SignInFinishedState</a></li>
+  <li><a href="../authentication.presentation/SignInForm-class.html">SignInForm</a></li>
+  <li><a href="../authentication.presentation/SignInInitialState-class.html">SignInInitialState</a></li>
+  <li><a href="../authentication.presentation/SignInPressed-class.html">SignInPressed</a></li>
+  <li><a href="../authentication.presentation/SignInPressedFacebook-class.html">SignInPressedFacebook</a></li>
+  <li><a href="../authentication.presentation/SignInPressedGoogle-class.html">SignInPressedGoogle</a></li>
+  <li><a href="../authentication.presentation/SignInPressedTwitter-class.html">SignInPressedTwitter</a></li>
+  <li><a href="../authentication.presentation/SignInProcessingState-class.html">SignInProcessingState</a></li>
+  <li><a href="../authentication.presentation/SignInProviderButton-class.html">SignInProviderButton</a></li>
+  <li><a href="../authentication.presentation/SignInScreen-class.html">SignInScreen</a></li>
+  <li><a href="../authentication.presentation/SignInState-class.html">SignInState</a></li>
+  <li><a href="../authentication.presentation/Unauthenticated-class.html">Unauthenticated</a></li>
+  <li><a href="../authentication.presentation/Uninitialized-class.html">Uninitialized</a></li>
+
+
+
+
+
+
+
+
+</ol>
+
+  </div><!--/sidebar-offcanvas-right-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    wayfar
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/script.js?v1"></script>
+
+
+
+</body>
+
+</html>
+
